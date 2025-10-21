@@ -1,12 +1,18 @@
-package listsearch
+package lists
 
 import "fmt"
 
-func Find(l []int, x int) int {
+func Find(l []int, a int) int {
+	for i := 0; i < len(l); i++ {
+		if l[i] == a {
+			return i
+		}
 
+	}
+	return -1
 }
 
-func ExampleFindElement() {
+func ExampleFind() {
 	l1 := []int{17, 5, 42, 25, 3, -4, 8, -23}
 
 	pos1 := Find(l1, 42)
